@@ -5,7 +5,7 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
 - Second step, choose between the method you want to use to match them(content,structure or content-layout).
 
 **To get the content similarity between 2 invoices**, use ContentSimilarity.py <br/>
-   INPUT: 2 csv files, list of Labels(already defined, see data)<br/>
+   INPUT: 2 invoices csv files, list of Labels(already defined, see data folder)<br/>
    OUTPUT: similarity value on the content<br/>
    It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
    Those subgraphs are matched between them. 
@@ -13,27 +13,27 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
 ```
  Usage example:
  Uncomment: #labels=['SN','SA','SCN','SCID','SCPOR','SFAX','SVAT','BN','BA','SHN', 'SHA', 'SHSA', 'UP', 'PTWTX', 'TXR', 'TWTX', 'TA', 'TTX','IN','IDATE', 'ONUM', 'PMODE', 'SSIRET', 'STOA','CNUM']
-#print(Levenshtein('./data/csv/amazon/amazon0.csv','./data/csv/amazon/amazon0.csv',labels))
+#print(Levenshtein('./data/amazon0.csv','./data/amazon1.csv',labels))
  
  Run: ContentSimilarity.py
 ```
     
 **To get the layout similarity between 2 invoices**, use LayoutSimilarity.py<br/>
-   INPUT: 2 csv files, list of Labels(already defined, see data)<br/>
-   OUTPUT: similarity value on the content<br/>
+   INPUT: 2 invoices csv files, list of Labels(already defined, see data folder)<br/>
+   OUTPUT: similarity value on the layout<br/>
    It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
-   Those subgraphs are matched between them.
+   Those subgraphs are transformed to laplacian matrix, then get the similarity between them.
    At the end, we add the similarity value of each label and compute the average. It is that average similarity that is being return.
 ```
  Usage example:  
  Uncomment: #labels=['SN','SA','SCN','SCID','SCPOR','SFAX','SVAT','BN','BA','SHN', 'SHA', 'SHSA', 'UP', 'PTWTX', 'TXR', 'TWTX', 'TA', 'TTX','IN','IDATE', 'ONUM', 'PMODE', 'SSIRET', 'STOA','CNUM']
-#print(Laplacian('./data/csv/amazon/amazon0.csv','./data/csv/amazon/amazon0.csv',labels))
+#print(Laplacian('./data/amazon0.csv','./data/amazon1.csv',labels))
  
  Run: LayoutSimilarity.py
 ```
 **To get the merger of content-layout similarity between 2 invoices**, use mergerMethod.py<br/>
-   INPUT: 2 csv files, list of Labels(already defined, see data), NormArea.CSV(already defined,see data)<br/>
-   OUTPUT: - similarity value on the Layout<br/>
+   INPUT: 2 invoices csv files, list of Labels(already defined, see data folder), NormArea.CSV(already defined,see data)<br/>
+   OUTPUT: - similarity value on the layout<br/>
            - number of recognized entities<br/>
            - similarity value on the content<br/>
    It takes 2 invoices in csv file, list of labels,and a list of NormArea.
