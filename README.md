@@ -4,12 +4,12 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
 ## Requirements:
 ======
 ```
-Conda version: 4.8.3.<br/>
-Python version: 3.7.6. <br/>
-lxml.etree.ElementTree version: 4.5.1 <br/>
-Panda Dataframe version: 1.0.3. <br/>
-Matplotlib version: 3.2.1<br/>
-Networks version: 2.4<br/>
+Conda version: 4.8.3.
+Python version: 3.7.6. 
+lxml.etree.ElementTree version: 4.5.1 
+Panda Dataframe version: 1.0.3. 
+Matplotlib version: 3.2.1
+Networks version: 2.4
 ```
 
 ## Tests
@@ -24,11 +24,11 @@ $ python LayoutSimilarity.py
 $ python mergerMethod.py
 ```
 
-### - Pre-processing step, transform invoice xml to csv file using InvoiceToCsv.py<br/>
-### - Then, choose between the method you want to use to match them(content,structure or content-layout).<br/>
+**- Pre-processing step, transform invoice xml to csv file using InvoiceToCsv.py<br/>
+ - Then, choose between the method you want to use to match them(content,structure or content-layout).<br/>**
 
 
-**To get the content similarity between 2 invoices**, use ContentSimilarity.py <br/>
+### To get the content similarity between 2 invoices, use ContentSimilarity.py <br/>
    INPUT: 2 invoices csv files, list of Labels(already defined, see data folder)<br/>
    OUTPUT: similarity value on the content<br/>
    It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
@@ -36,14 +36,14 @@ $ python mergerMethod.py
    At the end, we add the similarity value of each label and compute the average. It is that average similarity that is being return.
 
     
-**To get the layout similarity between 2 invoices**, use LayoutSimilarity.py<br/>
+### To get the layout similarity between 2 invoices, use LayoutSimilarity.py<br/>
    INPUT: 2 invoices csv files, list of Labels(already defined, see data folder)<br/>
    OUTPUT: similarity value on the layout<br/>
    It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
    Those subgraphs are transformed to laplacian matrix, then get the similarity between them.
    At the end, we add the similarity value of each label and compute the average. It is that average similarity that is being return.
-
-**To get the merger of content-layout similarity between 2 invoices**, use mergerMethod.py<br/>
+ 
+### To get the merger of content-layout similarity between 2 invoices, use mergerMethod.py<br/>
    INPUT: 2 invoices csv files, list of Labels(already defined, see data folder), NormArea.CSV(already defined,see data)<br/>
    OUTPUT: <br/>
    - similarity value on the layout<br/>
