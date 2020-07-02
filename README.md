@@ -4,10 +4,9 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
 - First step, transform xml to csv file using InvoiceToCsv.py
 - Second step, choose between the method you want to use to match them(content,structure or content-layout).
 
-To get the content similarity between 2 invoices, use ContentSimilarity.py
-   INPUT: 2 csv files, list of Labels(already defined, see data)
-   OUTPUT: similarity value on the content
-
+**To get the content similarity between 2 invoices**, use ContentSimilarity.py <br/>
+   INPUT: 2 csv files, list of Labels(already defined, see data)<br/>
+   OUTPUT: similarity value on the content<br/>
    It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
    Those subgraphs are matched between them. 
    At the end, we add the similarity value of each label and compute the average. It is that average similarity that is being return.
@@ -19,10 +18,9 @@ To get the content similarity between 2 invoices, use ContentSimilarity.py
  run: ContentSimilarity.py
 ```
     
-To get the layout similarity between 2 invoices, use LayoutSimilarity.py
-   INPUT: 2 csv files, list of Labels(already defined, see data)
-   OUTPUT: similarity value on the content
-
+**To get the layout similarity between 2 invoices**, use LayoutSimilarity.py<br/>
+   INPUT: 2 csv files, list of Labels(already defined, see data)<br/>
+   OUTPUT: similarity value on the content<br/>
    It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
    Those subgraphs are matched between them.
    At the end, we add the similarity value of each label and compute the average. It is that average similarity that is being return.
@@ -33,12 +31,11 @@ To get the layout similarity between 2 invoices, use LayoutSimilarity.py
  
  run: LayoutSimilarity.py
 ```
-To get the merger of content-layout similarity between 2 invoices, use mergerMethod.py
-   INPUT: 2 csv files, list of Labels(already defined, see data), NormArea.CSV(already defined,see data)
-   OUTPUT: -similarity value on the Layout
-           -number of recognized entities
-           -similarity value on the content
-
+**To get the merger of content-layout similarity between 2 invoices**, use mergerMethod.py<br/>
+   INPUT: 2 csv files, list of Labels(already defined, see data), NormArea.CSV(already defined,see data)<br/>
+   OUTPUT: - similarity value on the Layout<br/>
+           - number of recognized entities<br/>
+           - similarity value on the content<br/>
    It takes 2 invoices in csv file, list of labels,and a list of NormArea.
    An area norm is defined for each entity: it is a surface that each entity would likely appear. It is already defined, see data folder.
    ISCC checks the contrast of the invoices in two steps: first in the structure.
