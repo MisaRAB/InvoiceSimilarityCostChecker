@@ -15,7 +15,7 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
  Uncomment: #labels=['SN','SA','SCN','SCID','SCPOR','SFAX','SVAT','BN','BA','SHN', 'SHA', 'SHSA', 'UP', 'PTWTX', 'TXR', 'TWTX', 'TA', 'TTX','IN','IDATE', 'ONUM', 'PMODE', 'SSIRET', 'STOA','CNUM']
 #print(Levenshtein('./data/csv/amazon/amazon0.csv','./data/csv/amazon/amazon0.csv',labels))
  
- run: ContentSimilarity.py
+ Run: ContentSimilarity.py
 ```
     
 **To get the layout similarity between 2 invoices**, use LayoutSimilarity.py<br/>
@@ -29,7 +29,7 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
  Uncomment: #labels=['SN','SA','SCN','SCID','SCPOR','SFAX','SVAT','BN','BA','SHN', 'SHA', 'SHSA', 'UP', 'PTWTX', 'TXR', 'TWTX', 'TA', 'TTX','IN','IDATE', 'ONUM', 'PMODE', 'SSIRET', 'STOA','CNUM']
 #print(Laplacian('./data/csv/amazon/amazon0.csv','./data/csv/amazon/amazon0.csv',labels))
  
- run: LayoutSimilarity.py
+ Run: LayoutSimilarity.py
 ```
 **To get the merger of content-layout similarity between 2 invoices**, use mergerMethod.py<br/>
    INPUT: 2 csv files, list of Labels(already defined, see data), NormArea.CSV(already defined,see data)<br/>
@@ -49,10 +49,10 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
 ```
  Usage example:  
  Uncomment #labels=['SN','SA','SCN','SCID','SCPOR','SFAX','SVAT','BN','BA','SHN', 'SHA', 'SHSA', 'UP', 'PTWTX', 'TXR', 'TWTX', 'TA', 'TTX','IN','IDATE', 'ONUM', 'PMODE', 'SSIRET', 'STOA','CNUM']
- #dataF = pd.read_csv("./data/NormArea.csv")
-#print(Laplacian('./data/csv/amazon/amazon0.csv','./data/csv/amazon/amazon0.csv',labels))
+#NormArea = pd.read_csv("./data/NormArea.csv")
+#print(Compare2Layout('./data/amazon0.csv', './data/amazon1.csv',labels,NormArea))
  
- run: LayoutSimilarity.py
+ Run: mergerMethod.py
 ```
 Here is the list of labels:
 labels=['SN','SA','SCN','SCID','SCPOR','SFAX','SVAT','BN','BA','SHN', 'SHA', 'SHSA', 'UP', 'PTWTX', 'TXR', 'TWTX', 'TA', 'TTX','IN','IDATE', 'ONUM', 'PMODE', 'SSIRET', 'STOA','CNUM']
