@@ -29,7 +29,7 @@ $ python mergerMethod.py
 ### To get the content similarity between 2 invoices, use ContentSimilarity.py <br/>
    INPUT: 2 invoices csv files, list of Labels(already defined, see data folder)<br/>
    OUTPUT: similarity value on the content<br/>
-   It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
+   It takes 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
    Those subgraphs are matched between them. 
    At the end, we add the similarity value of each label and compute the average. It is that average similarity that is being return.
 
@@ -37,7 +37,7 @@ $ python mergerMethod.py
 ### To get the layout similarity between 2 invoices, use LayoutSimilarity.py<br/>
    INPUT: 2 invoices csv files, list of Labels(already defined, see data folder)<br/>
    OUTPUT: similarity value on the layout<br/>
-   It take 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
+   It takes 2 invoices in csv file and list of labels. The words related to each label is picked, transformed into dictionary, then subgraph.
    Those subgraphs are transformed to laplacian matrix, then get the similarity between them.
    At the end, we add the similarity value of each label and compute the average. It is that average similarity that is being return.
  
@@ -47,8 +47,8 @@ $ python mergerMethod.py
    - similarity value on the layout<br/>
    - number of common recognized entities<br/>
    - similarity value on the content<br/>
+   
    It takes 2 invoices in csv file, list of labels,and a list of NormArea.
-   An area norm is defined for each entity: it is a surface that each entity would likely appear.
    ISCC checks the contrast of the invoices in two steps: first in the structure.
    If the formats are relatively the same, then in the second step, the contents of each layout are compared.
    It is that average similarity between invoices that is being return.
