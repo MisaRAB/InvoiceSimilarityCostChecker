@@ -2,7 +2,6 @@
 Invoice Similarity Cost Checker is a tool that checks the similarity between invoices. It checks the content similarity, layout similarity and merger of both.
 
 ## Requirements:
-======
 ```
 Conda version: 4.8.3.
 Python version: 3.7.6. 
@@ -13,19 +12,18 @@ Networks version: 2.4
 ```
 
 ## Tests
-======
 ```
 #get 
-$ git clone https://github.com/hell03end/pylev3.git
-$ cd pylev3
+$ git clone https://github.com/MisaRAB/InvoiceSimilarityCostChecker.git
+$ cd InvoiceSimilarityCostChecker
 # run
 $ python ContentSimilarity.py
 $ python LayoutSimilarity.py
 $ python mergerMethod.py
 ```
 
-**- Pre-processing step, transform invoice xml to csv file using InvoiceToCsv.py<br/>
- - Then, choose between the method you want to use to match them(content,structure or content-layout).<br/>**
+- Pre-processing step, transform invoice xml to csv file using InvoiceToCsv.py<br/>
+- Then, choose between the method you want to use to match them(content,structure or content-layout).<br/>
 
 
 ### To get the content similarity between 2 invoices, use ContentSimilarity.py <br/>
