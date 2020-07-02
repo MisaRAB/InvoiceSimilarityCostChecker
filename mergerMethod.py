@@ -131,4 +131,4 @@ def contentSimilarity(CSVPath1,CSVPath2,label):
 
 labels=['SN','SA','SCN','SCID','SCPOR','SFAX','SVAT','BN','BA','SHN', 'SHA', 'SHSA', 'UP', 'PTWTX', 'TXR', 'TWTX', 'TA', 'TTX','IDATE', 'ONUM', 'PMODE', 'SSIRET', 'STOA','CNUM']
 NormArea = pd.read_csv("./data/NormArea.csv")
-print(Compare2Layout('./data/amazon0.csv', './data/amazon0.csv',labels,NormArea)) #amazon
+print(Compare2Layout('./data/amazon0.csv', './data/amazon1.csv',labels,NormArea)) #amazon
