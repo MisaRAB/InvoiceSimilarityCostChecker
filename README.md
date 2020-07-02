@@ -33,9 +33,10 @@ Invoice Similarity Cost Checker is a tool that checks the similarity between inv
 ```
 **To get the merger of content-layout similarity between 2 invoices**, use mergerMethod.py<br/>
    INPUT: 2 invoices csv files, list of Labels(already defined, see data folder), NormArea.CSV(already defined,see data)<br/>
-   OUTPUT: - similarity value on the layout<br/>
-           - number of recognized entities<br/>
-           - similarity value on the content<br/>
+   OUTPUT: <br/>
+   - similarity value on the layout<br/>
+   - number of common recognized entities<br/>
+   - similarity value on the content<br/>
    It takes 2 invoices in csv file, list of labels,and a list of NormArea.
    An area norm is defined for each entity: it is a surface that each entity would likely appear. It is already defined, see data folder.
    ISCC checks the contrast of the invoices in two steps: first in the structure.
